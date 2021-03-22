@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.novembergave.androiddevchallenge.data
 
-import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
+import kotlin.random.Random
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-@RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
-    @get:Rule
-    val composeTestRule = createAndroidComposeRule<MainActivity>()
+class WeatherRepository {
 
-    @Test
-    fun sampleTest() {
-        // Add instrumented tests here
+    fun getTodaysWeather(): Weather {
+        val random = Random.Default
+        val values = WEATHER.values()
+        return with(values[random.nextInt(values.size)]) {
+            Weather(
+                temperature = temperature,
+                weatherType = type
+            )
+        }
+    }
+
+    private enum class WEATHER(val temperature: Int, val type: WeatherType) {
+        SUNNY(22, WeatherType.SUNNY),
+        RAINY(18, WeatherType.RAINY),
+        CLOUDY(20, WeatherType.CLOUDY)
     }
 }

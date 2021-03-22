@@ -13,26 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.data
+package com.novembergave.androiddevchallenge.data
 
-import kotlin.random.Random
-
-class WeatherRepository {
-
-    fun getTodaysWeather(): Weather {
-        val random = Random.Default
-        val values = WEATHER.values()
-        return with(values[random.nextInt(values.size)]) {
-            Weather(
-                temperature = temperature,
-                weatherType = type
-            )
-        }
-    }
-
-    private enum class WEATHER(val temperature: Int, val type: WeatherType) {
-        SUNNY(22, WeatherType.SUNNY),
-        RAINY(18, WeatherType.RAINY),
-        CLOUDY(20, WeatherType.CLOUDY)
-    }
-}
+data class WeatherUiModel(
+    val day: String,
+    val time: String,
+    val weatherImageRes: Int,
+    val weatherLabel: String,
+    val temperature: String
+)

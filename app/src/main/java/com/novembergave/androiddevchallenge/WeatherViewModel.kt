@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.novembergave.androiddevchallenge
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.androiddevchallenge.data.WeatherRepository
-import com.example.androiddevchallenge.data.WeatherType
-import com.example.androiddevchallenge.data.WeatherUiModel
+import com.novembergave.androiddevchallenge.data.WeatherRepository
+import com.novembergave.androiddevchallenge.data.WeatherType
+import com.novembergave.androiddevchallenge.data.WeatherUiModel
 import java.text.DateFormat.getDateInstance
 import java.text.DateFormat.getTimeInstance
 import java.util.Calendar

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.novembergave.androiddevchallenge
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -46,9 +46,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Observer
-import com.example.androiddevchallenge.data.WeatherUiModel
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.novembergave.androiddevchallenge.data.WeatherUiModel
+import com.novembergave.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

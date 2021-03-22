@@ -13,13 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.novembergave.androiddevchallenge.ui.theme
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    // Add unit tests here
-}
+import androidx.compose.ui.graphics.Color
+import com.novembergave.androiddevchallenge.R
+
+val red = Color(R.color.palette_red)
+val darkBlue = Color(R.color.palette_dark_blue)
+val lightBlue = Color(R.color.palette_light_blue)
+val teal = Color(R.color.palette_teal)
+val lightTeal = Color(R.color.palette_light_teal)
+val white = Color(R.color.white)
+val black = Color(R.color.black)

@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.data
+package com.novembergave.androiddevchallenge.data
 
-data class Weather(
-    val temperature: Int,
-    val weatherType: WeatherType
-)
+enum class WeatherType {
+    SUNNY,
+    RAINY,
+    CLOUDY
+}
