@@ -13,15 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.data
 
-import androidx.compose.ui.graphics.Color
-import com.example.androiddevchallenge.R
+import kotlin.random.Random
 
-val red = Color(R.color.palette_red)
-val darkBlue = Color(R.color.palette_dark_blue)
-val lightBlue = Color(R.color.palette_light_blue)
-val teal = Color(R.color.palette_teal)
-val lightTeal = Color(R.color.palette_light_teal)
-val white = Color(R.color.white)
-val black = Color(R.color.black)
+class WeatherRepository {
+
+    fun getTodaysWeather(): Weather {
+        val random = Random.Default
+        val values = WEATHER.values()
+        return with(values[random.nextInt(values.size)]) {
+            Weather(
+                temperature = temperature,
+                weatherType = type
+            )
+        }
+    }
+
+    private enum class WEATHER(val temperature: Int, val type: WeatherType) {
+        SUNNY(22, WeatherType.SUNNY),
+        RAINY(18, WeatherType.RAINY),
+        CLOUDY(20, WeatherType.CLOUDY)
+    }
+}

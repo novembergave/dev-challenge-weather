@@ -13,15 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.data
 
-import androidx.compose.ui.graphics.Color
-import com.example.androiddevchallenge.R
-
-val red = Color(R.color.palette_red)
-val darkBlue = Color(R.color.palette_dark_blue)
-val lightBlue = Color(R.color.palette_light_blue)
-val teal = Color(R.color.palette_teal)
-val lightTeal = Color(R.color.palette_light_teal)
-val white = Color(R.color.white)
-val black = Color(R.color.black)
+data class WeatherUiModel(
+    val day: String,
+    val time: String,
+    val weatherImageRes: Int,
+    val weatherLabel: String,
+    val temperature: String
+)
